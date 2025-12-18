@@ -2,539 +2,733 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
-  <meta property="og:url" content="URL OF THE WEBSITE"/>
-  <meta property="og:image" content="static/image/your_banner_image.png" />
-  <meta property="og:image:width" content="1200"/>
-  <meta property="og:image:height" content="630"/>
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="description" content="Quantum-Inspired Green Hydrogen Forecasting">
+  <meta property="og:title" content="IoT Project: Quantum Green Hydrogen"/>
+  <meta property="og:description" content="Quantum-inspired green hydrogen production forecasting system"/>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="icon" type="image/x-icon" href="static/images/sejong.png">
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-  rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="static/css/index.css">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
-  <script src="static/js/bulma-carousel.min.js"></script>
-  <script src="static/js/bulma-slider.min.js"></script>
-  <script src="static/js/index.js"></script>
-  <meta charset="UTF-8">
-  <title>Project IoT: Quantum-Inspired  Green  Hydrogen Forecasting</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <title>Quantum-Inspired Green Hydrogen Forecasting</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --dark-green-bg: #0a1f0f;
+      --dark-green-secondary: #0d2818;
+      --dark-green-accent: #164429;
+      --dark-green-hover: #1a5835;
+      --sky-blue: #87ceeb;
+      --sky-blue-light: #a8daef;
+      --sky-blue-dark: #6bb6d8;
+      --white: #ffffff;
+      --off-white: #f0f4f8;
+      --green-glow: #2ecc71;
+      --shadow-color: rgba(0, 0, 0, 0.4);
+    }
+
     body {
-      background: linear-gradient(135deg, #e8f0f2 0%, #d4e0e1 100%);
-      color: #2c3e50; 
-      font-family: 'Space Mono', monospace; 
+      background: linear-gradient(135deg, var(--dark-green-bg) 0%, var(--dark-green-secondary) 50%, var(--dark-green-accent) 100%);
+      color: var(--sky-blue);
+      font-family: 'Inter', sans-serif;
+      line-height: 1.7;
       min-height: 100vh;
-    }
-    
-    .publication-title {
-      font-size: 3rem;
-      font-weight: bold;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      justify-content: center;
-    }
-
-    .title-text {
-      background: linear-gradient(135deg, #2d5f4f 0%, #4a9b7f 50%, #6bc9a8 100%);
-      background-size: 200% 200%;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      animation: gradientShift 8s ease infinite;
-      font-family: 'Orbitron', sans-serif;
-      filter: drop-shadow(0 2px 4px rgba(45, 95, 79, 0.3));
-    }
-
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    
-    .publication-links .button {
-      background: linear-gradient(135deg, #2d5f4f 0%, #4a9b7f 100%);
-      background-size: 200% 200%;
-      color: white !important;
-      font-weight: 600;
-      border: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(45, 95, 79, 0.3);
-    }
-
-    .publication-links .button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(74, 155, 127, 0.5);
-      background-position: 100% 50%;
-    }
-
-    .publication-links .button .icon i,
-    .publication-links .button .icon img {
-      filter: drop-shadow(0 0 1px rgba(255,255,255,0.5));
-      vertical-align: middle;
-      color: white !important;
-    }
-
-    .publication-links .link-block {
-      margin: 0 0.3rem;
-    }
-    
-    .title.is-3 {
-      background: linear-gradient(135deg, #2d5f4f 0%, #4a9b7f 100%);
-      color: white !important; 
-      padding: 20px; 
-      border-radius: 16px; 
-      box-shadow: 0 8px 30px rgba(45, 95, 79, 0.3); 
-      text-align: center;
-      margin-top: 3rem !important; 
-      margin-bottom: 2rem !important; 
-      font-family: 'Orbitron', sans-serif;
       position: relative;
-      overflow: hidden;
     }
 
-    .title.is-3::before {
+    /* Animated grid background */
+    body::before {
       content: '';
-      position: absolute;
+      position: fixed;
       top: 0;
-      left: -100%;
+      left: 0;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-      animation: shine 3s infinite;
+      background-image: 
+        linear-gradient(var(--dark-green-accent) 1px, transparent 1px),
+        linear-gradient(90deg, var(--dark-green-accent) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.1;
+      z-index: -1;
+      pointer-events: none;
     }
 
-    @keyframes shine {
-      0% { left: -100%; }
-      100% { left: 100%; }
-    }
-
-    .video-container, .image-container {
-      border: none;
-      border-radius: 20px;
-      box-shadow: 0 10px 40px rgba(45, 95, 79, 0.2); 
+    /* Floating particles */
+    .particles {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
       overflow: hidden;
-      background: white;
-      padding: 20px; 
-      margin-bottom: 3rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      z-index: 0;
+      pointer-events: none;
     }
 
-    .video-container:hover, .image-container:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 15px 50px rgba(74, 155, 127, 0.3);
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      background: var(--green-glow);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--green-glow);
+      animation: float 20s infinite ease-in-out;
     }
 
-    .footer {
-      background: linear-gradient(135deg, #2d5f4f 0%, #4a9b7f 100%);
-      color: white;
-      padding: 3rem 1.5rem;
-      border-top: none;
-      margin-top: 4rem;
-    }
-    
-    .footer a {
-      color: #b8e6d5; 
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .footer a:hover {
-      color: white; 
-    }
-    
-    .hero-body {
-      padding-bottom: 0 !important;
-      background: transparent;
-    }
-    
-    .publication-authors .author-block {
-      color: #5a6c7d; 
-    }
-    
-    .publication-authors a {
-      color: #2d5f4f; 
-      transition: color 0.3s ease;
-    }
-    
-    .publication-authors a:hover {
-      color: #4a9b7f; 
-    }
-    
-    .content strong {
-      color: #2d5f4f; 
-    }
-    
-    .content span {
-      color: #4a9b7f; 
-    }
-    
-    .content ul li {
-      margin-bottom: 0.5rem;
-    }
-    
-    .content ul li strong {
-      color: #2d5f4f; 
-    }
-
-    .section {
-      background: transparent;
-    }
-
-    .content img {
-      border-radius: 16px;
-      box-shadow: 0 8px 30px rgba(45, 95, 79, 0.2);
-      transition: transform 0.3s ease;
-    }
-
-    .content img:hover {
-      transform: scale(1.02);
+    @keyframes float {
+      0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+      10% { opacity: 0.7; }
+      90% { opacity: 0.7; }
+      100% { transform: translateY(-100vh) translateX(100px); opacity: 0; }
     }
 
     .container {
-      background: white;
-      border-radius: 20px;
-      padding: 2rem;
-      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
     }
 
+    /* Hero Section */
     .hero {
-      background: transparent;
+      text-align: center;
+      padding: 100px 20px 80px;
+      position: relative;
     }
 
-    .title.is-4 {
-      color: #2d5f4f;
-      font-family: 'Orbitron', sans-serif;
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(46, 204, 113, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: heroGlow 4s infinite alternate;
     }
 
-    .subtitle {
-      color: #5a6c7d;
+    @keyframes heroGlow {
+      0% { transform: translate(-50%, -50%) scale(1); opacity: 0.3; }
+      100% { transform: translate(-50%, -50%) scale(1.1); opacity: 0.6; }
     }
 
-    video {
+    .publication-title {
+      font-size: 3.8rem;
+      font-weight: 800;
+      margin-bottom: 25px;
+      position: relative;
+      z-index: 1;
+      letter-spacing: -1.5px;
+    }
+
+    .title-text {
+      color: var(--white);
+      display: inline-block;
+      text-shadow: 0 0 30px rgba(46, 204, 113, 0.5), 0 2px 10px rgba(0, 0, 0, 0.5);
+      animation: titlePulse 3s infinite alternate;
+    }
+
+    @keyframes titlePulse {
+      0% { text-shadow: 0 0 30px rgba(46, 204, 113, 0.5), 0 2px 10px rgba(0, 0, 0, 0.5); }
+      100% { text-shadow: 0 0 50px rgba(46, 204, 113, 0.8), 0 2px 15px rgba(0, 0, 0, 0.7); }
+    }
+
+    .subtitle-tag {
+      display: inline-block;
+      background: rgba(46, 204, 113, 0.15);
+      color: var(--green-glow);
+      padding: 10px 28px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-top: 15px;
+      border: 2px solid rgba(46, 204, 113, 0.4);
+      box-shadow: 0 0 20px rgba(46, 204, 113, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .subtitle-tag:hover {
+      background: rgba(46, 204, 113, 0.25);
+      box-shadow: 0 0 30px rgba(46, 204, 113, 0.4);
+      transform: translateY(-2px);
+    }
+
+    /* Authors Section */
+    .authors {
+      text-align: center;
+      margin: 50px 0;
+      color: var(--sky-blue);
+      position: relative;
+      z-index: 1;
+    }
+
+    .authors a {
+      color: var(--sky-blue-light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+      padding-bottom: 2px;
+    }
+
+    .authors a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--green-glow);
+      transition: width 0.3s ease;
+      box-shadow: 0 0 8px var(--green-glow);
+    }
+
+    .authors a:hover {
+      color: var(--green-glow);
+    }
+
+    .authors a:hover::after {
+      width: 100%;
+    }
+
+    /* Buttons */
+    .button-group {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin: 50px 0;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .button {
+      background: linear-gradient(135deg, var(--dark-green-hover) 0%, var(--dark-green-accent) 100%);
+      color: var(--white) !important;
+      padding: 16px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 6px 25px rgba(46, 204, 113, 0.3);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgba(46, 204, 113, 0.3);
+    }
+
+    .button::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      border-radius: 50%;
+      background: rgba(46, 204, 113, 0.4);
+      transform: translate(-50%, -50%);
+      transition: width 0.6s, height 0.6s;
+    }
+
+    .button:hover::before {
+      width: 400px;
+      height: 400px;
+    }
+
+    .button:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 35px rgba(46, 204, 113, 0.5);
+      border-color: var(--green-glow);
+    }
+
+    .button i,
+    .button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Section Styles */
+    .section {
+      background: rgba(13, 40, 24, 0.6);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      padding: 50px;
+      margin: 50px 0;
+      box-shadow: 0 10px 40px var(--shadow-color);
+      border: 1px solid rgba(46, 204, 113, 0.2);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .section:hover {
+      border-color: rgba(46, 204, 113, 0.4);
+      box-shadow: 0 15px 50px rgba(46, 204, 113, 0.2);
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(46, 204, 113, 0.1) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      color: var(--white);
+      margin-bottom: 35px;
+      font-weight: 700;
+      position: relative;
+      display: inline-block;
+      padding-bottom: 15px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--green-glow) 0%, var(--sky-blue) 100%);
+      border-radius: 2px;
+      box-shadow: 0 0 10px var(--green-glow);
+    }
+
+    .section-title i {
+      margin-right: 15px;
+      color: var(--green-glow);
+      animation: iconFloat 3s infinite ease-in-out;
+    }
+
+    @keyframes iconFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Video Container */
+    .video-container {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.5);
+      background: var(--dark-green-accent);
+      padding: 12px;
+      margin: 35px 0;
+      transition: all 0.4s ease;
+      border: 2px solid rgba(46, 204, 113, 0.2);
+    }
+
+    .video-container:hover {
+      transform: scale(1.02);
+      box-shadow: 0 20px 60px rgba(46, 204, 113, 0.3);
+      border-color: rgba(46, 204, 113, 0.5);
+    }
+
+    .video-container video {
+      width: 100%;
+      border-radius: 10px;
+      display: block;
+    }
+
+    /* Content Boxes */
+    .content-box {
+      background: rgba(22, 68, 41, 0.4);
+      border-left: 5px solid var(--green-glow);
+      padding: 30px;
+      margin: 30px 0;
       border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .content-box:hover {
+      background: rgba(22, 68, 41, 0.5);
+      box-shadow: 0 8px 30px rgba(46, 204, 113, 0.2);
+    }
+
+    .content-box strong {
+      color: var(--white);
+      font-size: 1.15rem;
+      font-weight: 600;
+    }
+
+    .content-box p {
+      color: var(--sky-blue);
+      line-height: 1.8;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 12px 0 12px 35px;
+      position: relative;
+      color: var(--sky-blue);
+      line-height: 1.8;
+      transition: all 0.2s ease;
+    }
+
+    ul li:hover {
+      color: var(--sky-blue-light);
+      padding-left: 40px;
+    }
+
+    ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      color: var(--green-glow);
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    ul li strong {
+      color: var(--white);
+    }
+
+    /* Image Grid */
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 35px;
+      margin: 40px 0;
+    }
+
+    .image-card {
+      background: rgba(13, 40, 24, 0.8);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+      transition: all 0.4s ease;
+      border: 2px solid rgba(46, 204, 113, 0.2);
+    }
+
+    .image-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 50px rgba(46, 204, 113, 0.3);
+      border-color: var(--green-glow);
+    }
+
+    .image-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: all 0.4s ease;
+    }
+
+    .image-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-card-content {
+      padding: 25px;
+      text-align: center;
+      background: rgba(10, 31, 15, 0.8);
+    }
+
+    .image-card-title {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
+    .image-card-content p {
+      color: var(--sky-blue);
+      font-size: 0.95rem;
+    }
+
+    /* Images in sections */
+    .section img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      margin-top: 25px;
+      border: 2px solid rgba(46, 204, 113, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .section img:hover {
+      box-shadow: 0 15px 50px rgba(46, 204, 113, 0.3);
+      border-color: var(--green-glow);
+    }
+
+    /* Role Section */
+    .role-section {
+      background: rgba(22, 68, 41, 0.5);
+      border: 2px solid rgba(46, 204, 113, 0.4);
+    }
+
+    /* Footer */
+    .footer {
+      background: rgba(10, 31, 15, 0.95);
+      color: var(--sky-blue);
+      padding: 50px 20px;
+      text-align: center;
+      margin-top: 80px;
+      border-radius: 20px 20px 0 0;
+      border-top: 2px solid rgba(46, 204, 113, 0.3);
+      box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .footer a {
+      color: var(--green-glow);
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .footer a:hover {
+      color: var(--sky-blue-light);
+      text-shadow: 0 0 10px var(--green-glow);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .publication-title {
+        font-size: 2.2rem;
+      }
+      
+      .section {
+        padding: 35px 25px;
+      }
+
+      .section-title {
+        font-size: 1.9rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Selection color */
+    ::selection {
+      background: var(--green-glow);
+      color: var(--dark-green-bg);
     }
   </style>
 </head>
 <body>
+  <!-- Animated Background Particles -->
+  <div class="particles">
+    <div class="particle" style="left: 5%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 15%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 25%; animation-delay: 6s;"></div>
+    <div class="particle" style="left: 35%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 45%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 55%; animation-delay: 8s;"></div>
+    <div class="particle" style="left: 65%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 75%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 85%; animation-delay: 7s;"></div>
+    <div class="particle" style="left: 95%; animation-delay: 9s;"></div>
+  </div>
 
-  <section class="hero">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <div class="columns is-centered">
-          <div class="column has-text-centered">
-            <h1 class="title publication-title">
-              <span class="title-text">IoT Project : Quantum-Inspired  Green  Hydrogen Forecasting </span>
-            </h1>
-            <div class="is-size-5 publication-authors">
-              <span class="author-block">
-                <a href="https://github.com/nataliaal426626" target="_blank">Natalia</a><sup>1</sup>,
-                <span class="author-block">
-                  <a href="https://github.com/mkha0172-star" target="_blank">Khan</a><sup>2</sup>,
-                </span>
-                <span class="author-block">
-                  <a href="https://github.com/alvenusrat07" target="_blank">Alve</a><sup>3</sup>
-                </span>
-              </span>
-              <br>
-              <span class="author-block">
-                <a href="https://github.com/zubair1811"  target="_blank">Class Incharge: Muhammad Zubair Islam</a><sup>4</sup>
-              </span>
-              <br>
-            </div>
-
-            <br>
-            <div class="is-size-5 publication-authors">
-              <div style="text-align: center; margin-bottom: 5px;">
-                <span class="author-block"><sup>1</sup> Sejong University, Department of </span><br>
-                <span class="author-block"><sup>2</sup> Sejong University, Department of </span><br>
-                <span class="author-block"><sup>3</sup> Sejong University, Department of </span><br>
-                <span class="author-block"><sup>4</sup> Sejong University, Department of AI and Robotics</span>
-              </div>
-            </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-                <span class="link-block">
-                  <a href="https://ujies-my.sharepoint.com/:p:/r/personal/al426626_uji_es/Documents/Quantum-Inspired%20Hydrogen%20Forecasting-1.pptx?d=w20bd52bb7477494c8e661e1aa972387d&csf=1&web=1&e=waDVRe" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fas fa-file-alt"></i>
-                    </span>
-                    <span>Slides</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="https://github.com/nataliaal426626/IoT-005A.git" target="_blank"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                  </a>
-                </span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3 has-text-centered">
-              Welcome to Use This Project
-            </h2>
-            <div class="level-set has-text-justified">
-              <p></p>
-            </div>
-            <div style="border: none; border-radius: 20px; box-shadow: 0 12px 40px rgba(45, 95, 79, 0.2); overflow: hidden; background: linear-gradient(135deg, #2d5f4f 0%, #4a9b7f 100%); padding: 15px;">
-              <video poster="" id="tree" autoplay controls muted loop height="100%" style="display: block; width: 100%; border-radius: 12px;">
-                <source src="static/videos/slides_video.mp4" type="video/mp4">
-              </video>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3">
-              Overview
-            </h2>
-            <div class="content has-text-justified">
-              <p>
-                This project simulates a <strong>quantum-inspired green hydrogen production forecasting system</strong> using classical ESP32 microcontroller logic.
-                The forecasting function mimics <strong>quantum-like superposition</strong> by assigning probabilistic weights to possible outcomes: an increase, maintenance, or decrease in hydrogen output.
-                Our goal is to explore how these concepts can be applied to sustainable energy management.
-              </p>
-              <img src="static/images/components.jpg" alt="Teaser GIF" height="100%">
-              <p class="subtitle has-text-centered"></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3">
-              Method
-            </h2>
-            <div class="content has-text-justified" style="font-size: 4.5 rem;">
-              <strong>Simulation Architecture:</strong>
-              <ul style="list-style-type: disc; margin-left: 20px;">
-                <li><strong>Solar Input (<span class="icon"><i class="fas fa-sun"></i></span>):</strong> LDR sensor to simulate light intensity.</li>
-                <li><strong>Water Input (<span class="icon"><i class="fas fa-tint"></i></span>):</strong> Potentiometer to simulate electrolyzer water flow or level.</li>
-                <li><strong>Central Processing (<span class="icon"><i class="fas fa-microchip"></i></span>):</strong> ESP32 module responsible for the quantum-inspired forecasting logic.</li>
-                <li><strong>Forecasting Output (<span class="icon"><i class="fas fa-lightbulb"></i></span>):</strong> LEDs visually indicate predicted hydrogen production levels (color and brightness).</li>
-                <li><strong>Data Logging (<span class="icon"><i class="fas fa-terminal"></i></span>):</strong> Serial Monitor for detailed analysis of inputs, states, and results.</li>
-              </ul>
-            </div>
-            <div style="text-align: center;">
-              <img src="static/images/necessary_parts.png" alt="MY ALT TEXT" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title is-3">Method & System Architecture</h2>
-      <div class="content has-text-justified">
-        <p>
-          Our final system implements a <strong>hybrid simulation architecture</strong>. It combines real-world sensor data with digitally generated patterns to create a robust testing environment for the quantum-inspired algorithm. The system is composed of five main functional blocks connected to an ESP32 microcontroller.
+  <!-- Hero Section -->
+  <div class="hero">
+    <div class="container">
+      <h1 class="publication-title">
+        <span class="title-text">⚛️ Quantum-Inspired Green Hydrogen Forecasting</span>
+      </h1>
+      <div class="subtitle-tag">Quantum Computing • IoT Systems • Predictive Intelligence</div>
+      
+      <div class="authors">
+        <p style="font-size: 1.15rem; margin: 25px 0;">
+          <a href="https://github.com/nataliaal426626" target="_blank">Natalia</a><sup>1</sup> • 
+          <a href="https://github.com/mkha0172-star" target="_blank">Khan</a><sup>2</sup> • 
+          <a href="https://github.com/alvenusrat07" target="_blank">Alve</a><sup>3</sup>
         </p>
-        
-        <strong>System Components & Data Flow:</strong>
-        <ul style="list-style-type: disc; margin-left: 20px;">
-          <li><strong>Hybrid Inputs (<span class="icon"><i class="fas fa-random"></i></span>):</strong> 
-            <ul>
-              <li><strong>Solar Data:</strong> A weighted mix of real-world data from an <strong>LDR sensor</strong> and a digitally generated sine wave pattern.</li>
-              <li><strong>Water Data:</strong> Purely digitally generated sine wave patterns to simulate varying electrolyzer water levels.</li>
-            </ul>
-          </li>
-          <li><strong>Central Processing Unit (<span class="icon"><i class="fas fa-microchip"></i></span>):</strong> The <strong>ESP32</strong> runs the quantum-inspired probabilistic forecasting algorithm, including a memory weight feature for output stabilization.</li>
-          <li><strong>Dual-OLED Visualization (HMI) (<span class="icon"><i class="fas fa-desktop"></i></span>):</strong>
-            <ul>
-              <li><strong>OLED 1 (Status Monitor):</strong> Displays real-time input percentages and bar graphs for Solar, Water, and H2 Potential, along with the final forecast text.</li>
-              <li><strong>OLED 2 (Trend Analysis):</strong> Draws a live, scrolling line graph showing the history of the predicted H2 production potential.</li>
-            </ul>
-          </li>
-          <li><strong>Forecast Indicator (<span class="icon"><i class="fas fa-lightbulb"></i></span>):</strong> An <strong>RGB LED</strong> provides immediate visual feedback of the forecast (Green=Increase, Blue=Stable, Red=Decrease).</li>
-          <li><strong>Data Logging (<span class="icon"><i class="fas fa-file-csv"></i></span>):</strong> Outputs CSV-formatted data via the Serial port for external analysis.</li>
-        </ul>
+        <p style="font-size: 1rem; margin: 12px 0;">
+          Class Incharge: <a href="https://github.com/zubair1811" target="_blank">Muhammad Zubair Islam</a><sup>4</sup>
+        </p>
+        <p style="font-size: 0.95rem; margin-top: 20px;">
+          <sup>1,2,3</sup> Sejong University<br>
+          <sup>4</sup> Sejong University, Department of AI and Robotics
+        </p>
       </div>
 
-      <div style="text-align: center; margin-top: 2rem;">
-        <img src="static/images/final_system_architecture.png" alt="Final System Architecture Diagram" style="display: block; width: 100%; border-radius: 15px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);">
-        <p class="subtitle has-text-centered">Figure 1: Complete System Architecture Diagram (Wokwi Simulation)</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3">Results & Demonstration</h2>
-            
-            <div class="content has-text-justified">
-              <p>
-                The final system successfully demonstrates the capability of the quantum-inspired algorithm to process hybrid inputs and generate stable, probabilistic forecasts. The dual-OLED setup provides a comprehensive Human-Machine Interface (HMI) for real-time monitoring.
-              </p>
-            </div>
-
-            <div class="columns is-centered" style="margin-top: 2rem;">
-              <div class="column is-half has-text-centered">
-                <h4 class="title is-4">OLED 1: Status Monitor</h4>
-                <img src="static/images/oled1_status.png" alt="OLED 1 Status Monitor showing bar graphs" style="width: 100%; height: auto; aspect-ratio: 128 / 64; object-fit: contain; background-color: black; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-                <p class="subtitle is-6">Real-time inputs and forecast status with bar graphs.</p>
-              </div>
-              
-              <div class="column is-half has-text-centered">
-                <h4 class="title is-4">OLED 2: Live Trend Graph</h4>
-                <img src="static/images/oled2_graph.png" alt="OLED 2 Live Graph showing H2 trend" style="width: 100%; height: auto; aspect-ratio: 128 / 64; object-fit: contain; background-color: black; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-                <p class="subtitle is-6">Live scrolling graph of H2 production potential over time.</p>
-              </div>
-            </div>
-
-            <div class="content has-text-justified" style="margin-top: 1.5rem;">
-              <p>
-                The RGB LED complements these displays, providing immediate, at-a-glance feedback of the forecast state, changing color smoothly as predictions shift based on the probabilistic model.
-              </p>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3">Full System Demonstration</h2>
-            <div class="content has-text-justified">
-              <p>
-                Watch the complete quantum-inspired hydrogen forecasting system in operation. This video demonstrates the real-time interaction between the hybrid sensor inputs, the dual-OLED visualization, and the RGB LED forecast indicator.
-              </p>
-            </div>
-            
-            <div style="border: none; border-radius: 20px; box-shadow: 0 12px 40px rgba(45, 95, 79, 0.2); overflow: hidden; background: linear-gradient(135deg, #2d5f4f 0%, #4a9b7f 100%); padding: 15px; margin-top: 2rem;">
-              <video id="full-system-video" controls muted loop style="display: block; width: 100%; border-radius: 12px;">
-                <source src="static/videos/demo.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section hero is-small">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-full">
-          <div class="content">
-            <h2 class="title is-3">Key Algorithm Features</h2>
-            <ul>
-              <li><strong>Quantum-Inspired Probabilistic Forecasting:</strong> Instead of deterministic outputs, the system calculates probabilities for three superpositioned states (Increase, Stable, Decrease) and collapses them to a single decision, mimicking quantum measurement uncertainty.</li>
-              <li><strong>Memory Weight Stabilization:</strong> To prevent erratic switching between forecasts when probabilities are close, a "memory" factor adds weight to the previous decision in the next calculation. This introduces realistic system inertia and stability.</li>
-              <li><strong>Hybrid Data Fusion:</strong> The system intelligently combines real-time sensor readings with generated data patterns, allowing for robust testing across a wide range of simulated environmental scenarios.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-<section class="section hero is-small" style="background-color: #0f2030;"> <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column is-full">
-        <div class="content">
-          <h2 class="title is-3" style="color: #20e3b2;">My Role & Contributions (Khan)</h2>
-          
-          <div class="content has-text-justified">
-            <p>
-              My primary focus was on the overall <strong>system design, simulation infrastructure, and project coordination</strong>. I designed the complete ESP32-based circuit architecture in Wokwi, ensuring all simulated components interacted correctly to support the quantum-inspired algorithm.
-            </p>
-            <p>Key contributions included:</p>
-            <ul>
-              <li>
-                <strong>Hybrid Simulation Implementation:</strong> To handle diverse real-world conditions, I designed and implemented the hybrid approach where solar input combines real LDR readings with digitally generated patterns. This allowed for robust testing of stable, extreme, and intermediate scenarios without relying solely on physical hardware.
-              </li>
-              <li>
-                <strong>Data Analysis & Validation:</strong> I analyzed system behavior in depth using the Serial Monitor. By exporting simulation data in CSV format, I observed and validated how solar input, water availability, and hydrogen energy potential evolved over time to ensure the algorithm's output made sense.
-              </li>
-              <li>
-                <strong>Integration Coordination:</strong> I acted as the bridge between team members, coordinating the crucial integration phase between the algorithm development and the visualization components to ensure the full workflow was consistent and functional.
-              </li>
-            </ul>
-          </div>
-
-        </div>
+      <div class="button-group">
+        <a href="https://www.canva.com/design/DAG72RHB6v4/X-UhAMCyJA34BuLXZzarlw/edit" target="_blank" class="button">
+          <i class="fas fa-file-powerpoint"></i>
+          <span>View Slides</span>
+        </a>
+        <a href="https://github.com/mkha0172-star/iot05abid" target="_blank" class="button">
+          <i class="fab fa-github"></i>
+          <span>Source Code</span>
+        </a>
       </div>
     </div>
   </div>
-</section>
 
+  <!-- Welcome Video Section -->
+  <div class="container">
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-play-circle"></i>Welcome to Our Project</h2>
+      <div class="video-container">
+        <video controls muted loop>
+          <source src="static/videos/slides_video.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
-              You are free to borrow the of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
-              Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
+    <!-- Overview Section -->
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-lightbulb"></i>Project Overview</h2>
+      <div class="content-box">
+        <p>
+          This project simulates a <strong>quantum-inspired green hydrogen production forecasting system</strong> using classical ESP32 microcontroller logic.
+          The forecasting function mimics <strong>quantum-like superposition</strong> by assigning probabilistic weights to possible outcomes: an increase, maintenance, or decrease in hydrogen output.
+          Our goal is to explore how these concepts can be applied to sustainable energy management.
+        </p>
+      </div>
+      <img src="static/images/components.jpg" alt="System Components">
+    </div>
+
+    <!-- Method Section -->
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-cogs"></i>Methodology</h2>
+      <div class="content-box">
+        <strong>Simulation Architecture:</strong>
+        <ul>
+          <li><strong>Solar Input (<i class="fas fa-sun" style="color: #ffa726;"></i>):</strong> LDR sensor to simulate light intensity.</li>
+          <li><strong>Water Input (<i class="fas fa-tint" style="color: #42a5f5;"></i>):</strong> Potentiometer to simulate electrolyzer water flow or level.</li>
+          <li><strong>Central Processing (<i class="fas fa-microchip" style="color: #ab47bc;"></i>):</strong> ESP32 module responsible for the quantum-inspired forecasting logic.</li>
+          <li><strong>Forecasting Output (<i class="fas fa-lightbulb" style="color: #ffca28;"></i>):</strong> LEDs visually indicate predicted hydrogen production levels (color and brightness).</li>
+          <li><strong>Data Logging (<i class="fas fa-terminal" style="color: #66bb6a;"></i>):</strong> Serial Monitor for detailed analysis of inputs, states, and results.</li>
+        </ul>
+      </div>
+      <img src="static/images/necessary_parts.png" alt="System Parts">
+    </div>
+
+    <!-- System Architecture -->
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-project-diagram"></i>System Architecture</h2>
+      <div class="content-box">
+        <p>
+          Our final system implements a <strong>hybrid simulation architecture</strong>. It combines real-world sensor data with digitally generated patterns to create a robust testing environment for the quantum-inspired algorithm.
+        </p>
+        <strong>System Components & Data Flow:</strong>
+        <ul>
+          <li><strong>Hybrid Inputs:</strong> Weighted mix of real-world LDR sensor data and digitally generated sine wave patterns.</li>
+          <li><strong>Central Processing Unit:</strong> ESP32 runs the quantum-inspired probabilistic forecasting algorithm with memory weight stabilization.</li>
+          <li><strong>Dual-OLED Visualization (HMI):</strong> Real-time status monitor and live trend analysis graphs.</li>
+          <li><strong>Forecast Indicator:</strong> RGB LED provides immediate visual feedback (Green=Increase, Blue=Stable, Red=Decrease).</li>
+          <li><strong>Data Logging:</strong> CSV-formatted data output for external analysis.</li>
+        </ul>
+      </div>
+      <img src="static/images/final_system_architecture.png" alt="System Architecture">
+    </div>
+
+    <!-- Results Section -->
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-chart-line"></i>Results & Demonstration</h2>
+      <p style="margin-bottom: 35px;">
+        The final system successfully demonstrates the capability of the quantum-inspired algorithm to process hybrid inputs and generate stable, probabilistic forecasts. The dual-OLED setup provides a comprehensive Human-Machine Interface (HMI) for real-time monitoring.
+      </p>
+      
+      <div class="image-grid">
+        <div class="image-card">
+          <img src="static/images/oled1_status.png" alt="OLED 1 Status Monitor" style="background-color: black;">
+          <div class="image-card-content">
+            <div class="image-card-title">OLED 1: Status Monitor</div>
+            <p>Real-time inputs and forecast status with bar graphs</p>
+          </div>
+        </div>
+        
+        <div class="image-card">
+          <img src="static/images/oled2_graph.png" alt="OLED 2 Trend Graph" style="background-color: black;">
+          <div class="image-card-content">
+            <div class="image-card-title">OLED 2: Live Trend Graph</div>
+            <p>Live scrolling graph of H2 production potential</p>
           </div>
         </div>
       </div>
     </div>
-  </footer>
+
+    <!-- Demo Video -->
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-video"></i>Full System Demo</h2>
+      <p style="margin-bottom: 25px;">
+        Watch the complete quantum-inspired hydrogen forecasting system in operation, demonstrating real-time interaction between hybrid sensor inputs, dual-OLED visualization, and RGB LED forecast indicator.
+      </p>
+      <div class="video-container">
+        <video controls muted loop>
+          <source src="static/videos/demo.mp4" type="video/mp4">
+        </video>
+      </div>
+    </div>
+
+    <!-- Key Features -->
+    <div class="section">
+      <h2 class="section-title"><i class="fas fa-star"></i>Key Algorithm Features</h2>
+      <div class="content-box">
+        <ul>
+          <li><strong>Quantum-Inspired Probabilistic Forecasting:</strong> Calculates probabilities for three superpositioned states and collapses them to a single decision, mimicking quantum measurement uncertainty.</li>
+          <li><strong>Memory Weight Stabilization:</strong> Adds weight to previous decisions to prevent erratic switching and introduce realistic system inertia.</li>
+          <li><strong>Hybrid Data Fusion:</strong> Intelligently combines real-time sensor readings with generated data patterns for robust testing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Role Section -->
+    <div class="section role-section">
+      <h2 class="section-title"><i class="fas fa-user-circle"></i>My Role & Contribution (Khan Md Abidur Rahman)</h2>
+      <div class="content-box" style="background: rgba(22, 68, 41, 0.6); border-left: 5px solid var(--green-glow);">
+        <ul style="padding-left: 0; margin: 0;">
+          <li><strong>Quantum-Inspired Conceptualization:</strong> Conceived the quantum-inspired idea for forecasting green hydrogen production under uncertain environmental conditions.</li>
+          <li><strong>Probabilistic Algorithm Design:</strong> Designed the quantum-inspired probabilistic algorithm that models system behavior using superposition-based states (increase, remain, decrease).</li>
+          <li><strong>Quantum Memory Mechanism:</strong> Developed the quantum memory mechanism to stabilize predictions by incorporating previous system states.</li>
+          <li><strong>Adaptive Decision-Making:</strong> Introduced and tuned quantum noise injection to enable adaptive, non-deterministic decision-making.</li>
+          <li><strong>Logic Framework Development:</strong> Defined the quantum-inspired decision logic independent of machine learning or data training.</li>
+          <li><strong>Theoretical Foundation:</strong> Provided the theoretical quantum-inspired framework that guided system behavior and forecasting logic.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <div class="container">
+      <p>
+        This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> adapted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project.
+      </p>
+      <p style="margin-top: 15px;">
+        Licensed under a <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+      </p>
+    </div>
+  </div>
 
 </body>
 </html>
